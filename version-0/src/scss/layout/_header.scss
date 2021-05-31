@@ -1,0 +1,32 @@
+.page__header {
+  width: 100%;
+  height: 111px;
+  box-sizing: border-box;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  @media all and (min-width: 768px) {
+    justify-content: space-between;
+    padding-left: 30px;
+  }
+  @media all and (min-width: 1024px) {
+    padding-left: 40px;
+  }
+}
+.header__logo {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+.header__title{
+  display: none;
+}
+.miaudio {
+  width: 180px;
+  height: 30px;
+  margin-right: 15px;
+}

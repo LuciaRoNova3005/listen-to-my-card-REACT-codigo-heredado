@@ -1,0 +1,113 @@
+.section-share {
+  border-style: none;
+  // margin-top: -20px; //Sube la sección para reducir margen
+  border-style: none;
+  border-bottom: 1px solid $grey-stroke;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //border-bottom: $grey-stroke 1px solid;
+  padding-bottom: 30px;
+}
+
+.share-button {
+  width: 199px;
+  height: 50px;
+  border-radius: 12px;
+  border-style: none;
+  background-color: #426633;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.32);
+  color: $font-button-color;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: $main-font;
+  font-weight: 600;
+  &:hover {
+    background-color: fade-in($color: #92c57d, $amount: 0);
+    transition: background-color ease 1s, box-shadow ease 0.5s;
+    box-shadow: 0 0 rem(6) 0 rgba(0, 0, 0, 0.5);
+  }
+}
+
+.address-card-icon {
+  size: 22px;
+  margin-right: 9px;
+}
+
+/*OPCIÓN 2*/
+.js-hiddenTwitter {
+  display: none;
+}
+
+.btn-disable {
+  background-color: #d5d5d5;
+  &:hover {
+    pointer-events: none;
+  }
+}
+
+.set-up-container-top {
+  border-top: $grey-stroke 1px solid;
+}
+
+.set-up-container {
+  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //border-bottom: $grey-stroke 1px solid;
+  //padding-bottom: 30px;
+}
+
+.text-set-up {
+  //display: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: $title-section-color;
+  font-family: $main-font;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 32px;
+}
+
+.link-set-up {
+  font-size: 12px;
+  font-family: $main-font;
+  color: $contrast-color;
+  font-weight: 400;
+  padding-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.twitter-button {
+  //display: none;
+  width: 181px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #00a0f5;
+  border-style: none;
+  color: $font-button-color;
+  font-family: $main-font;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 30px;
+  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.32);
+  margin-top: 10px;
+  margin-bottom: 30px;
+  // vertical-align: middle;
+}
+
+.twitter-icon {
+  size: 18px;
+  vertical-align: middle;
+  padding-right: 9.5px;
+}

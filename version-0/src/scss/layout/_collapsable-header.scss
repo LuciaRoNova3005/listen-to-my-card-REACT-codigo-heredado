@@ -1,0 +1,40 @@
+.collapsable__header {
+  width: auto;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: $main-font;
+  color: $title-section-color;
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+  &--title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.header-icon {
+  color: #426633;
+  size: rem(18);
+  margin-right: rem(12);
+
+  @media all and (min-width: 768px) {
+    margin-right: rem(12.5);
+  }
+}
+.fa-chevron-up {
+  color: $title-section-color;
+}
+
+.hidden {
+  .hidden-content {
+    display: none;
+  }
+
+  .hidden__icon {
+    transform: rotate(180deg);
+  }
+}

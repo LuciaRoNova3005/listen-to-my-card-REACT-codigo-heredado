@@ -1,0 +1,86 @@
+.section-fill {
+  border-style: none;
+  border-bottom: rem(1) solid $grey-stroke;
+}
+
+.form {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-padding {
+  padding-top: 20px;
+}
+
+.form-selections {
+  @include tablet {
+    width: 50%;
+  }
+}
+.label {
+  font-size: rem(14);
+  line-height: rem(20);
+  font-family: $main-font;
+  color: $labelNameColor;
+  display: block;
+  margin: 0 0 rem(7) 0;
+}
+.input {
+  font-size: rem(14);
+  line-height: rem(20);
+  font-family: $main-font;
+  color: $title-section-color;
+  display: block;
+  height: rem(30);
+  width: 100%;
+  border: solid rem(1) #aecda2;
+  box-sizing: border-box;
+  padding: rem(3) 0 rem(7) rem(9);
+  margin-bottom: rem(20);
+  &::placeholder {
+    color: $placeholder-text;
+  }
+}
+.action {
+  display: flex;
+}
+.action__upload-btn {
+  width: rem(140);
+  height: rem(30);
+  appearance: none;
+  background-color: #426633;
+  text-align: center;
+  font-family: $main-font;
+  font-size: rem(14);
+  padding: rem(8) 0;
+  color: #fff;
+  box-sizing: border-box; //??
+  cursor: pointer;
+  border-radius: rem(4);
+  border: none;
+  box-shadow: 0 1px rem(4) 0 rgba(0, 0, 0, 0.32);
+  margin-bottom: rem(20);
+  &:hover {
+    background-color: fade-in($color: #92c57d, $amount: 0);
+    transition: background-color ease 1s, box-shadow ease 0.5s;
+    box-shadow: 0 0 rem(6) 0 rgba(0, 0, 0, 0.5);
+  }
+}
+.action__hiddenField {
+  display: none;
+}
+.profile__preview {
+  width: rem(30);
+  height: rem(30);
+  border: rem(1) solid #aecda2;
+  display: inline-block;
+  margin-left: rem(20);
+  background-image: url("../images/listen-logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
