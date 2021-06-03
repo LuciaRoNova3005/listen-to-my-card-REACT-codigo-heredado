@@ -5,8 +5,8 @@ class Collapsable extends React.Component {
     return (
       <div className="js-hidden">
         <div className="collapsable__header container js-collapsible">
-          <i className=""></i>
-          <h2 className="collapsable__header--title">{this.props.children}</h2>
+          <i className="far fa-object-ungroup header-icon"></i>
+          <h2 className="collapsable__header--title">DISEÑA</h2>
           <i className="fas fa-chevron-up hidden__icon"></i>
         </div>
       </div>
@@ -25,5 +25,10 @@ class Collapsable extends React.Component {
     </div>
   );
 }*/
+/*<h2 className="collapsable__header--title">Rellena</h2>
+<i className="fas fa-chevron-up hidden__icon"></i>
+   <i className="fas fa-share-alt header-icon"></i>
+     <h2 className="collapsable__header--title">Comparte</
+*/
 
 export default Collapsable;
