@@ -1,18 +1,35 @@
 import React from "react";
 
-class Collapsable extends React.Component {
-  render() {
-    return (
-      <div className="js-hidden">
-        <div className="collapsable__header container js-collapsible">
-          <i className="far fa-object-ungroup header-icon"></i>
-          <h2 className="collapsable__header--title">DISEÑA</h2>
-          <i className="fas fa-chevron-up hidden__icon"></i>
+function Collapsable (props){
+
+  return(
+    <div className="js-hidden">
+   <div className="collapsable__header container js-collapsible">
+      <i className={props.icon}></i>
+      <h2 className={props.title}></h2>
+    <i className="fas fa-chevron-up hidden__icon"></i>
+    </div>
         </div>
-      </div>
-    );
-  }
+  );
 }
+
+export default Collapsable;
+
+// import React from "react";
+
+// class Collapsable extends React.Component {
+//   render() {
+//     return (
+//       <div className="js-hidden">
+//         <div className="collapsable__header container js-collapsible">
+//           <i className="far fa-object-ungroup header-icon"></i>
+//           <h2 className="collapsable__header--title">DISEÑA</h2>
+//           <i className="fas fa-chevron-up hidden__icon"></i>
+//         </div>
+//       </div>
+//     );
+//   }
+// }
 
 /*function Collapsable() {
   return (
@@ -31,4 +48,4 @@ class Collapsable extends React.Component {
      <h2 className="collapsable__header--title">Comparte</
 */
 
-export default Collapsable;
+
