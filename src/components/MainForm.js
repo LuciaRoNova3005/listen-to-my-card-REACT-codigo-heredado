@@ -14,13 +14,13 @@ function MainForm() {
       className="form"
       autocomplete="off"
     >
-      <Collapsable title="Diseña" icon="far fa-object-ungroup header-icon"></Collapsable>
-      <Design></Design>
-
-      <Collapsable title="Rellena" icon="fas fa-chevron-up hidden__icon"></Collapsable>
-      <Fill></Fill>
-      <Collapsable title="Comparte" icon="fas fa-share-alt header-icon"></Collapsable>
-      <Share></Share>
+      <Collapsable title="Diseña" icon="far fa-object-ungroup header-icon"><Design></Design>  </Collapsable>
+      
+     
+      <Collapsable title="Rellena" icon="far fa-keyboard i-main header-icon"> <Fill></Fill></Collapsable>
+     
+      <Collapsable title="Comparte" icon="fas fa-share-alt header-icon"><Share></Share></Collapsable>
+      
     </form>
   );
 }
