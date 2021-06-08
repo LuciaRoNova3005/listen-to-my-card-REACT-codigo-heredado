@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "./static/css/main.aece8fa5.chunk.css",
+    "main.js": "./static/js/main.4123d7c5.chunk.js",
+    "main.js.map": "./static/js/main.4123d7c5.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.65948ad6.js",
+    "runtime-main.js.map": "./static/js/runtime-main.65948ad6.js.map",
+    "static/js/2.e980d352.chunk.js": "./static/js/2.e980d352.chunk.js",
+    "static/js/2.e980d352.chunk.js.map": "./static/js/2.e980d352.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.aece8fa5.chunk.css.map": "./static/css/main.aece8fa5.chunk.css.map",
+    "static/js/2.e980d352.chunk.js.LICENSE.txt": "./static/js/2.e980d352.chunk.js.LICENSE.txt",
+    "static/media/Tez-Cadey-Seve.3b8ae8fc.ogg": "./static/media/Tez-Cadey-Seve.3b8ae8fc.ogg",
+    "static/media/Tez-Cadey-Seve.8e16aa0f.mp3": "./static/media/Tez-Cadey-Seve.8e16aa0f.mp3",
+    "static/media/App.scss": "./static/media/listen-logo.57abf660.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.65948ad6.js",
+    "static/js/2.e980d352.chunk.js",
+    "static/css/main.aece8fa5.chunk.css",
+    "static/js/main.4123d7c5.chunk.js"
+  ]
+}
