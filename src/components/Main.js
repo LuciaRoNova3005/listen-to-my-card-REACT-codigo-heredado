@@ -20,7 +20,7 @@ import MainPreview from "./MainPreview";
 import MainForm from "./MainForm";
 
 
-class App extends React.Component {
+class Main extends React.Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
@@ -64,5 +64,5 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Main;
 */
