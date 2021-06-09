@@ -19,7 +19,7 @@ function MainForm() {
      
       <Collapsable title="Rellena" icon="far fa-keyboard i-main header-icon"> <Fill></Fill></Collapsable>
      
-      <Collapsable title="Comparte" icon="fas fa-share-alt header-icon"><Share></Share></Collapsable>
+      <Collapsable title=""Comparte icon="fas fa-share-alt header-icon"><Share></Share></Collapsable>
       
     </form>
   );
