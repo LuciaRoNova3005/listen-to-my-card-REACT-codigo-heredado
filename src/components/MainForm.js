@@ -13,7 +13,7 @@ function MainForm(props) {
       method="post"
       id="form"
       className="form"
-      autocomplete="off"
+      autoComplete="off"
     >
       <Collapsable title="Diseña" icon="far fa-object-ungroup header-icon">
         <Design></Design>

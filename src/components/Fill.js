@@ -5,7 +5,7 @@ const Fill = (props) => {
   return (
     <fieldset className="section-fill container">
       <div className="hidden-content form-padding">
-        <label className="label" for="name">
+        <label className="label" htmlFor="name">
           Nombre completo
         </label>
         <input
@@ -15,11 +15,11 @@ const Fill = (props) => {
           type="text"
           id="name"
           name="name"
-          maxlength="19"
+          maxLength="19"
           placeholder="Ej: Sally Jill"
           required
         />
-        <label className="label" for="job">
+        <label className="label" htmlFor="job">
           Puesto
         </label>
         <input
@@ -31,9 +31,9 @@ const Fill = (props) => {
           name="job"
           placeholder="Ej: Front-end unicorn"
           required
-          maxlength="21"
+          maxLength="21"
         />
-        <label className="label" for="photo">
+        <label className="label" htmlFor="photo">
           Imagen de perfil
         </label>
         <div className="action">
@@ -53,7 +53,7 @@ const Fill = (props) => {
           />
           <div className="profile__preview js__profile-preview"></div> */}
         </div>
-        <label className="label" for="email">
+        <label className="label" htmlFor="email">
           Email
         </label>
         <input
@@ -64,7 +64,7 @@ const Fill = (props) => {
           placeholder="Ej: sally-hill@gmail.com"
           required
         />
-        <label className="label" for="phone">
+        <label className="label" htmlFor="phone">
           Teléfono
         </label>
         <input
@@ -77,7 +77,7 @@ const Fill = (props) => {
           placeholder="Ej: 555-55-55-55"
           required
         />
-        <label className="label" for="linkedin">
+        <label className="label" htmlFor="linkedin">
           Linkedin
         </label>
         <input
@@ -88,7 +88,7 @@ const Fill = (props) => {
           placeholder="Ej: sally-hill"
           required
         />
-        <label className="label" for="github">
+        <label className="label" htmlFor="github">
           Github
         </label>
         <input

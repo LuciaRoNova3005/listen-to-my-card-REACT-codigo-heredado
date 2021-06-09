@@ -4,7 +4,7 @@ class Pallete3 extends React.Component {
   render() {
     return (
       <div>
-        <label for="coloroption3" className="selection__options--palette">
+        <label htmlFor="coloroption3" className="selection__options--palette">
           <input
             id="3"
             type="radio"

@@ -69,7 +69,7 @@ class GetAvatar extends React.Component {
     const avatar = this.props.avatar === "" ? defaultAvatar : this.props.avatar;
     return (
       <>
-        <label className="action__upload-btn" for="photo" type="button">
+        <label className="action__upload-btn" htmlFor="photo" type="button">
           Añadir imagen
           <input
             type="file"

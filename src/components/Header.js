@@ -14,7 +14,7 @@ function Header() {
         />
       </a>
       <h1 className="header__title">Listen To My Cards</h1>
-      <audio id="miaudio" className="miaudio" controls autoplay>
+      <audio id="miaudio" className="miaudio" controls autoPlay>
         <source src={TezCadey} type="audio/mpeg" />
         <source src={TezCadeyOgg} type="audio/ogg" />
       </audio>
