@@ -1,14 +1,42 @@
 import React from "react";
 import MainPreview from "./MainPreview";
 import MainForm from "./MainForm";
+import defaultAvatar from "../images/listen-logo.png";
 
-function Main() {
-  return (
-    <main className="main wrapper">
-      <MainPreview />
-      <MainForm />
-    </main>
-  );
+class Main extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "",
+      avatar: defaultAvatar,
+    };
+    this.updateAvatar = this.updateAvatar.bind(this);
+    this.handleInputData = this.handleInputData.bind(this);
+  }
+
+  updateAvatar(avatar) {
+    this.setState({ avatar: avatar });
+  }
+
+  handleInputData(ev) {
+    const inputName = ev.currentTarget.name;
+    this.setState({
+      [inputName]: ev.currentTarget.value,
+    });
+  }
+  render() {
+    return (
+      <main className="main wrapper">
+        <MainPreview name={this.state.name} avatar={this.state.avatar} />
+        <MainForm
+          name={this.state.name}
+          handleInputData={this.handleInputData}
+          avatar={this.state.avatar}
+          updateAvatar={this.updateAvatar}
+        />
+      </main>
+    );
+  }
 }
 
 export default Main;

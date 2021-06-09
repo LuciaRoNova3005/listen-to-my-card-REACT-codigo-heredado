@@ -4,7 +4,8 @@ import Design from "./Design";
 import Fill from "./Fill";
 import Share from "./Share";
 
-function MainForm() {
+function MainForm(props) {
+  console.log(props);
   return (
     <form
       className="refillable js-form "
@@ -19,7 +20,12 @@ function MainForm() {
       </Collapsable>
 
       <Collapsable title="Rellena" icon="far fa-keyboard i-main header-icon">
-        <Fill></Fill>
+        <Fill
+          name={props.name}
+          handleInputData={props.handleInputData}
+          avatar={props.avatar}
+          updateAvatar={props.updateAvatar}
+        ></Fill>
       </Collapsable>
 
       <Collapsable title="Comparte" icon="fas fa-share-alt header-icon">
