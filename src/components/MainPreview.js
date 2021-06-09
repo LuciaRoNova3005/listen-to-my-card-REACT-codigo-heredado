@@ -1,12 +1,13 @@
 import React from "react";
-
-function MainPreview() {
+import Profile from "./Profile";
+function MainPreview(props) {
   return (
     <section className="page__preview">
       <button className="page__preview--button js-resetButton">
         <i className="far fa-trash-alt"></i>Reset
       </button>
       <div className="page__preview--card js-cardElement opt1">
+     
         <div className="preview__card--title-wrapper js-op__wrapper">
           <h2 className="preview__card--title js-namePreview js-op__name">
             Nombre Apellido
@@ -15,7 +16,10 @@ function MainPreview() {
             Front-end developer
           </h3>
         </div>
-        <div className="preview__card--image js-imgPreview"></div>
+        <div className="preview__card--image js-imgPreview">
+        <Profile avatar={props.avatar}/>
+          </div>
+        
         <ul className="preview__card--rrss">
           <li className="rrss-item js-op__circle js-op1__circle1">
             <a

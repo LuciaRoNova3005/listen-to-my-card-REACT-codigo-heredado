@@ -1,8 +1,8 @@
 import React from "react";
+import GetAvatar from "./GetAvatar";
 
-
-class Fill extends React.Component {
-  render() {
+const Fill = (props)=> {
+  
     return (
       <fieldset className="section-fill container">
         <div className="hidden-content form-padding">
@@ -34,7 +34,8 @@ class Fill extends React.Component {
           Imagen de perfil
         </label>
         <div className="action">
-          <label className="action__upload-btn" for="photo">
+          <GetAvatar avatar={props.avatar} updateAvatar={props.updateAvatar} ></GetAvatar>
+          {/* <label className="action__upload-btn" for="photo">
             Añadir imagen
           </label>
           <input
@@ -44,7 +45,7 @@ class Fill extends React.Component {
             name="photo"
             required
           />
-          <div className="profile__preview js__profile-preview"></div>
+          <div className="profile__preview js__profile-preview"></div> */}
         </div>
         <label className="label" for="email">
           Email
@@ -97,5 +98,5 @@ class Fill extends React.Component {
       </fieldset>
     );
   }
-}
+
 export default Fill;
