@@ -6,7 +6,7 @@
 .form {
   width: 100%;
   height: auto;
-  background: #fff;
+  //background: #fff;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -79,8 +79,8 @@
   border: rem(1) solid #aecda2;
   display: inline-block;
   margin-left: rem(20);
-  /*
-  background-image: url("../../../images/listen-logo.png");*/
+
+  background-image: url("../../../images/listen-logo.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
