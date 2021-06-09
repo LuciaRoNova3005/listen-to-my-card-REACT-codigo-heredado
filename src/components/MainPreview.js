@@ -1,25 +1,26 @@
 import React from "react";
 import Profile from "./Profile";
+
 function MainPreview(props) {
+  const nameCard = props.name === "" ? "Nombre Apellidos" : props.name;
   return (
     <section className="page__preview">
       <button className="page__preview--button js-resetButton">
         <i className="far fa-trash-alt"></i>Reset
       </button>
       <div className="page__preview--card js-cardElement opt1">
-     
         <div className="preview__card--title-wrapper js-op__wrapper">
           <h2 className="preview__card--title js-namePreview js-op__name">
-            Nombre Apellido
+            {nameCard}
           </h2>
           <h3 className="preview__card--subtitle js-jobPreview">
             Front-end developer
           </h3>
         </div>
         <div className="preview__card--image js-imgPreview">
-        <Profile avatar={props.avatar}/>
-          </div>
-        
+          <Profile avatar={props.avatar} />
+        </div>
+
         <ul className="preview__card--rrss">
           <li className="rrss-item js-op__circle js-op1__circle1">
             <a

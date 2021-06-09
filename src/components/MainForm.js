@@ -20,7 +20,12 @@ function MainForm(props) {
       </Collapsable>
 
       <Collapsable title="Rellena" icon="far fa-keyboard i-main header-icon">
-        <Fill avatar={props.avatar} updateAvatar={props.updateAvatar}></Fill>
+        <Fill
+          name={props.name}
+          handleInputData={props.handleInputData}
+          avatar={props.avatar}
+          updateAvatar={props.updateAvatar}
+        ></Fill>
       </Collapsable>
 
       <Collapsable title="Comparte" icon="fas fa-share-alt header-icon">

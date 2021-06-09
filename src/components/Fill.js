@@ -1,16 +1,17 @@
 import React from "react";
 import GetAvatar from "./GetAvatar";
 
-const Fill = (props)=> {
-  
-    return (
-      <fieldset className="section-fill container">
-        <div className="hidden-content form-padding">
+const Fill = (props) => {
+  return (
+    <fieldset className="section-fill container">
+      <div className="hidden-content form-padding">
         <label className="label" for="name">
           Nombre completo
         </label>
         <input
           className="input js-inputName"
+          value={props.name}
+          onChange={props.handleInputData}
           type="text"
           id="name"
           name="name"
@@ -34,7 +35,10 @@ const Fill = (props)=> {
           Imagen de perfil
         </label>
         <div className="action">
-          <GetAvatar avatar={props.avatar} updateAvatar={props.updateAvatar} ></GetAvatar>
+          <GetAvatar
+            avatar={props.avatar}
+            updateAvatar={props.updateAvatar}
+          ></GetAvatar>
           {/* <label className="action__upload-btn" for="photo">
             Añadir imagen
           </label>
@@ -93,10 +97,9 @@ const Fill = (props)=> {
           placeholder="Ej: sally-hill"
           required
         />
-          
-        </div>
-      </fieldset>
-    );
-  }
+      </div>
+    </fieldset>
+  );
+};
 
 export default Fill;
