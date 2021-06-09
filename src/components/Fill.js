@@ -24,6 +24,8 @@ const Fill = (props) => {
         </label>
         <input
           className="input js-inputJob"
+          value={props.job}
+          onChange={props.handleInputData}
           type="text"
           id="job"
           name="job"

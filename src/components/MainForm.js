@@ -22,8 +22,9 @@ function MainForm(props) {
       <Collapsable title="Rellena" icon="far fa-keyboard i-main header-icon">
         <Fill
           name={props.name}
-          handleInputData={props.handleInputData}
+          job={props.job}
           avatar={props.avatar}
+          handleInputData={props.handleInputData}
           updateAvatar={props.updateAvatar}
         ></Fill>
       </Collapsable>

@@ -3,6 +3,8 @@ import Profile from "./Profile";
 
 function MainPreview(props) {
   const nameCard = props.name === "" ? "Nombre Apellidos" : props.name;
+  const jobCard = props.job === "" ? "Front-end developer" : props.job;
+
   return (
     <section className="page__preview">
       <button className="page__preview--button js-resetButton">
@@ -13,9 +15,7 @@ function MainPreview(props) {
           <h2 className="preview__card--title js-namePreview js-op__name">
             {nameCard}
           </h2>
-          <h3 className="preview__card--subtitle js-jobPreview">
-            Front-end developer
-          </h3>
+          <h3 className="preview__card--subtitle js-jobPreview">{jobCard}</h3>
         </div>
         <div className="preview__card--image js-imgPreview">
           <Profile avatar={props.avatar} />
