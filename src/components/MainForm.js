@@ -24,6 +24,10 @@ function MainForm(props) {
           name={props.name}
           job={props.job}
           avatar={props.avatar}
+          email={props.email}
+          phone={props.phone}
+          linkedin={props.linkedin}
+          github={props.github}
           handleInputData={props.handleInputData}
           updateAvatar={props.updateAvatar}
         ></Fill>

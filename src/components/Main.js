@@ -24,14 +24,9 @@ class Main extends React.Component {
   }
 
   handleInputData(ev) {
-    const inputName = ev.currentTarget.name;
-    const inputJob = ev.currentTarget.job;
-
+    const key = ev.currentTarget.id;
     this.setState({
-      [inputName]: ev.currentTarget.value,
-    });
-    this.setState({
-      [inputJob]: ev.currentTarget.value,
+      [key]: ev.currentTarget.value,
     });
   }
   render() {
@@ -41,11 +36,19 @@ class Main extends React.Component {
           name={this.state.name}
           job={this.state.job}
           avatar={this.state.avatar}
+          email={this.state.email}
+          phone={this.state.phone}
+          linkedin={this.state.linkedin}
+          github={this.state.github}
         />
         <MainForm
           name={this.state.name}
           job={this.state.job}
           avatar={this.state.avatar}
+          email={this.state.email}
+          phone={this.state.phone}
+          linkedin={this.state.linkedin}
+          github={this.state.github}
           handleInputData={this.handleInputData}
           updateAvatar={this.updateAvatar}
         />

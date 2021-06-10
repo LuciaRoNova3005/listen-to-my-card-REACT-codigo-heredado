@@ -41,23 +41,14 @@ const Fill = (props) => {
             avatar={props.avatar}
             updateAvatar={props.updateAvatar}
           ></GetAvatar>
-          {/* <label className="action__upload-btn" for="photo">
-            Añadir imagen
-          </label>
-          <input
-            className="action__hiddenField js-inputImg"
-            type="file"
-            id="photo"
-            name="photo"
-            required
-          />
-          <div className="profile__preview js__profile-preview"></div> */}
         </div>
         <label className="label" htmlFor="email">
           Email
         </label>
         <input
           className="input js-inputEmail"
+          value={props.email}
+          onChange={props.handleInputData}
           type="email"
           id="email"
           name="email"
@@ -69,6 +60,8 @@ const Fill = (props) => {
         </label>
         <input
           className="input js-inputPhone"
+          value={props.phone}
+          onChange={props.handleInputData}
           type="tel"
           id="phone"
           name="phone"
@@ -82,6 +75,8 @@ const Fill = (props) => {
         </label>
         <input
           className="input js-inputLinkedin"
+          value={props.linkedin}
+          onChange={props.handleInputData}
           type="text"
           id="linkedin"
           name="linkedin"
@@ -93,6 +88,8 @@ const Fill = (props) => {
         </label>
         <input
           className="input js-inputGitHub"
+          value={props.github}
+          onChange={props.handleInputData}
           type="text"
           id="github"
           name="github"

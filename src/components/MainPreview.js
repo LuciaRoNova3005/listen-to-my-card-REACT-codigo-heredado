@@ -25,21 +25,21 @@ function MainPreview(props) {
           <li className="rrss-item js-op__circle js-op1__circle1">
             <a
               className="rrss-link fas fa-mobile-alt js-telPreview js-op__icon js-op1__icon1"
-              href="tel:+34"
+              href={"tel:+34" + props.phone}
               target="_blank"
             ></a>
           </li>
           <li className="rrss-item js-op__circle js-op1__circle2">
             <a
               className="rrss-link fas fa-envelope js-mailPreview js-op__icon js-op1__icon2"
-              href="mailto:"
+              href={"mailto:" + props.email}
               target="_blank"
             ></a>
           </li>
           <li className="rrss-item js-op__circle js-op1__circle3">
             <a
               className="rrss-link fab fa-linkedin-in js-linkedinPreview js-op__icon js-op1__icon3"
-              href="https://www.linkedin.com/in/"
+              href={"https://www.linkedin.com/in/" + props.linkedin}
               target="_blank"
             >
               <div className="icon"></div>
@@ -48,7 +48,7 @@ function MainPreview(props) {
           <li className="rrss-item js-op__circle js-op1__circle4">
             <a
               className="rrss-link fab fa-github-alt js-gitHubPreview js-op__icon js-op1__icon4"
-              href="https://github.com/"
+              href={"https://github.com/" + props.github}
               target="_blank"
             ></a>
           </li>
