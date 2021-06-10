@@ -8,10 +8,24 @@ class Main extends React.Component {
     super(props);
     this.state = {
       name: "",
+      job: "",
       avatar: defaultAvatar,
+      phone: "",
+      email: "",
+      linkedin: "",
+      github: "",
+      pallete: "1",
     };
     this.updateAvatar = this.updateAvatar.bind(this);
     this.handleInputData = this.handleInputData.bind(this);
+    this.handleColor = this.handleColor.bind(this);
+  }
+
+  handleColor(ev) {
+    const color = ev.target.id;
+    this.setState({
+      [color]: ev.target.value,
+    });
   }
 
   updateAvatar(avatar) {
@@ -19,20 +33,36 @@ class Main extends React.Component {
   }
 
   handleInputData(ev) {
-    const inputName = ev.currentTarget.name;
+    const key = ev.currentTarget.id;
     this.setState({
-      [inputName]: ev.currentTarget.value,
+      [key]: ev.currentTarget.value,
     });
   }
   render() {
     return (
       <main className="main wrapper">
-        <MainPreview name={this.state.name} avatar={this.state.avatar} />
+        <MainPreview
+          name={this.state.name}
+          job={this.state.job}
+          avatar={this.state.avatar}
+          email={this.state.email}
+          phone={this.state.phone}
+          linkedin={this.state.linkedin}
+          github={this.state.github}
+          pallete={this.state.pallete}
+        />
         <MainForm
           name={this.state.name}
-          handleInputData={this.handleInputData}
+          job={this.state.job}
           avatar={this.state.avatar}
+          email={this.state.email}
+          phone={this.state.phone}
+          linkedin={this.state.linkedin}
+          github={this.state.github}
+          pallete={this.state.pallete}
+          handleInputData={this.handleInputData}
           updateAvatar={this.updateAvatar}
+          handleColor={this.handleColor}
         />
       </main>
     );
@@ -40,57 +70,3 @@ class Main extends React.Component {
 }
 
 export default Main;
-
-/*
-import React from "react";
-import "../stylesheets/App.scss";
-import MainPreview from "./MainPreview";
-import MainForm from "./MainForm";
-
-
-class Main extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-    this.state = {
-      palette: "",
-      name: "",
-      job: "",
-      image: "",
-      email: "",
-      phone: "",
-      linkedin: "",
-      github: ""
-    };
-  }
-
-  handleChange(ev) {
-    const inputName = ev.target.name;
-    const inputJob = ev.target.job;
-    this.setState({
-      [inputName]: ev.target.value,
-    });
-    this.setState({
-      [inputJob]: ev.target.value,
-    });
-  }
-
-  render() {
-    return (
-      <>
-        <MainPreview
-          name={this.state.name}
-          job={this.state.job}
-        />
-        <MainForm
-        handleChange={this.handleChange}
-          name={this.state.name}
-          job={this.state.job}
-        />
-      </>
-    );
-  }
-}
-
-export default Main;
-*/

@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import defaultAvatar from '../images/listen-logo.png';
+import React from "react";
+import PropTypes from "prop-types";
+import defaultAvatar from "../images/listen-logo.png";
 // import '../stylesheets/GetAvatar.css';
 
 class GetAvatar extends React.Component {
@@ -23,15 +23,18 @@ class GetAvatar extends React.Component {
     // cuando pulsamos en la label o en <input type="file" />:
     // 1º se abre la ventana de nuestro ordenador para elegir un fichero
     // 2º cuando la usuaria elije un fichero se ejecuta este método manejador de eventos
-    console.log('La usuaria ha abierto la ventana para elegir ficheros');
+    console.log("La usuaria ha abierto la ventana para elegir ficheros");
 
     // cuando se abre la ventana de nuestro navegador podemos elegir uno o varios ficheros por ello ev.currentTarget.files es una array
-    console.log('La usuaria ha elegido los ficheros', ev.currentTarget.files);
+    console.log("La usuaria ha elegido los ficheros", ev.currentTarget.files);
 
     // para este ejercicio nos interesa solo el primero de los ficheros elegidos por la usuaria, por eso ponemos [0]
     // este primer fichero es un objeto con información útil del fichero como: nombre, última modificación, tamaño del fichero...
     // este objeto no tiene información privada del ordenador de la usuaria, por ejemplo no tenemos información de la carpeta en la que está la imagen
-    console.log('El primero de los ficheros elegidos es', ev.currentTarget.files[0]);
+    console.log(
+      "El primero de los ficheros elegidos es",
+      ev.currentTarget.files[0]
+    );
 
     // compruebo si la usuaria ha elegido al menos un fichero
     if (ev.currentTarget.files.length > 0) {
@@ -40,7 +43,7 @@ class GetAvatar extends React.Component {
 
       // añado un evento load al manejador de ficheros
       // por qué añado un evento, pues porque esto es una acción asíncrona, imaginemos que el fichero pesa 5 Gb, el navegador puede tardar unos cuantos segundos en cargar y procesar el fichero, por eso le decimos "navegador, cuando termines de cargar el fichero me ejecutas el método this.image"
-      this.fr.addEventListener('load', this.getImage);
+      this.fr.addEventListener("load", this.getImage);
 
       // le digo al manejador de ficheros que maneje, que cargue el fichero
       this.fr.readAsDataURL(myFile);
@@ -52,7 +55,7 @@ class GetAvatar extends React.Component {
     // cuando el navegador termina de manejar el fichero se ejecuta este método porque lo hemos indicado en this.fr.addEventListener('load', this.getImage);
 
     // this.fr guarda información útil sobre el fichero cargado
-    console.log('Información útil sobre el fichero cargado', this.fr);
+    console.log("Información útil sobre el fichero cargado", this.fr);
 
     // this.fr.result contiene los datos del fichero en un formato que se llama base64 que nos vale por que podemos usarlo para pintar una imagen en HTML
     const image = this.fr.result;
@@ -63,28 +66,34 @@ class GetAvatar extends React.Component {
   }
 
   render() {
-    const avatar = this.props.avatar === '' ? defaultAvatar : this.props.avatar;
+    const avatar = this.props.avatar === "" ? defaultAvatar : this.props.avatar;
     return (
-      <div className="get-avatar">
-        <label className="get-avatar__label" type="button">
-          Get avatar!
+      <>
+        <label className="action__upload-btn" htmlFor="photo" type="button">
+          Añadir imagen
           <input
             type="file"
             ref={this.myFileField}
-            className="get-avatar__upload-field"
+            className="action__hiddenField js-inputImg"
             onChange={this.uploadImage}
+            id="photo"
+            name="photo"
+            required
           />
         </label>
 
-        <div className="get-avatar__preview" style={{ backgroundImage: `url(${avatar})` }}></div>
-      </div>
+        <div
+          className="profile__preview js__profile-preview"
+          style={{ backgroundImage: `url(${avatar})` }}
+        ></div>
+      </>
     );
   }
 }
 
 GetAvatar.propTypes = {
   avatar: PropTypes.string.isRequired,
-  updateAvatar: PropTypes.func.isRequired
+  updateAvatar: PropTypes.func.isRequired,
 };
 
 export default GetAvatar;

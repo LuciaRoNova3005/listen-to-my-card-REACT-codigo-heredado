@@ -5,7 +5,7 @@ const Fill = (props) => {
   return (
     <fieldset className="section-fill container">
       <div className="hidden-content form-padding">
-        <label className="label" for="name">
+        <label className="label" htmlFor="name">
           Nombre completo
         </label>
         <input
@@ -15,23 +15,25 @@ const Fill = (props) => {
           type="text"
           id="name"
           name="name"
-          maxlength="19"
+          maxLength="19"
           placeholder="Ej: Sally Jill"
           required
         />
-        <label className="label" for="job">
+        <label className="label" htmlFor="job">
           Puesto
         </label>
         <input
           className="input js-inputJob"
+          value={props.job}
+          onChange={props.handleInputData}
           type="text"
           id="job"
           name="job"
           placeholder="Ej: Front-end unicorn"
           required
-          maxlength="21"
+          maxLength="21"
         />
-        <label className="label" for="photo">
+        <label className="label" htmlFor="photo">
           Imagen de perfil
         </label>
         <div className="action">
@@ -39,34 +41,27 @@ const Fill = (props) => {
             avatar={props.avatar}
             updateAvatar={props.updateAvatar}
           ></GetAvatar>
-          {/* <label className="action__upload-btn" for="photo">
-            Añadir imagen
-          </label>
-          <input
-            className="action__hiddenField js-inputImg"
-            type="file"
-            id="photo"
-            name="photo"
-            required
-          />
-          <div className="profile__preview js__profile-preview"></div> */}
         </div>
-        <label className="label" for="email">
+        <label className="label" htmlFor="email">
           Email
         </label>
         <input
           className="input js-inputEmail"
+          value={props.email}
+          onChange={props.handleInputData}
           type="email"
           id="email"
           name="email"
           placeholder="Ej: sally-hill@gmail.com"
           required
         />
-        <label className="label" for="phone">
+        <label className="label" htmlFor="phone">
           Teléfono
         </label>
         <input
           className="input js-inputPhone"
+          value={props.phone}
+          onChange={props.handleInputData}
           type="tel"
           id="phone"
           name="phone"
@@ -75,22 +70,26 @@ const Fill = (props) => {
           placeholder="Ej: 555-55-55-55"
           required
         />
-        <label className="label" for="linkedin">
+        <label className="label" htmlFor="linkedin">
           Linkedin
         </label>
         <input
           className="input js-inputLinkedin"
+          value={props.linkedin}
+          onChange={props.handleInputData}
           type="text"
           id="linkedin"
           name="linkedin"
           placeholder="Ej: sally-hill"
           required
         />
-        <label className="label" for="github">
+        <label className="label" htmlFor="github">
           Github
         </label>
         <input
           className="input js-inputGitHub"
+          value={props.github}
+          onChange={props.handleInputData}
           type="text"
           id="github"
           name="github"

@@ -13,17 +13,25 @@ function MainForm(props) {
       method="post"
       id="form"
       className="form"
-      autocomplete="off"
+      autoComplete="off"
     >
       <Collapsable title="Diseña" icon="far fa-object-ungroup header-icon">
-        <Design></Design>
+        <Design
+          pallete={props.pallete}
+          handleColor={props.handleColor}
+        ></Design>
       </Collapsable>
 
       <Collapsable title="Rellena" icon="far fa-keyboard i-main header-icon">
         <Fill
           name={props.name}
-          handleInputData={props.handleInputData}
+          job={props.job}
           avatar={props.avatar}
+          email={props.email}
+          phone={props.phone}
+          linkedin={props.linkedin}
+          github={props.github}
+          handleInputData={props.handleInputData}
           updateAvatar={props.updateAvatar}
         ></Fill>
       </Collapsable>
