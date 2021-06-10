@@ -5,6 +5,16 @@ function MainPreview(props) {
   const nameCard = props.name === "" ? "Nombre Apellidos" : props.name;
   const jobCard = props.job === "" ? "Front-end developer" : props.job;
 
+  const palleteCard = () => {
+    if (props.pallete === 2) {
+      palleteCard = "opt2";
+    } else if (props.pallete === 3) {
+      palleteCard = "opt3";
+    } else {
+      palleteCard = "opt1";
+    }
+  };
+
   return (
     <section className="page__preview">
       <button className="page__preview--button js-resetButton">

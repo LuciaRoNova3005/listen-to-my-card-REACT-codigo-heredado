@@ -14,9 +14,18 @@ class Main extends React.Component {
       email: "",
       linkedin: "",
       github: "",
+      pallete: "1",
     };
     this.updateAvatar = this.updateAvatar.bind(this);
     this.handleInputData = this.handleInputData.bind(this);
+    this.handleColor = this.handleColor.bind(this);
+  }
+
+  handleColor(ev) {
+    const key = ev.target.id;
+    this.setState({
+      [key]: ev.target.value,
+    });
   }
 
   updateAvatar(avatar) {
@@ -40,6 +49,7 @@ class Main extends React.Component {
           phone={this.state.phone}
           linkedin={this.state.linkedin}
           github={this.state.github}
+          pallete={this.state.pallete}
         />
         <MainForm
           name={this.state.name}
@@ -49,8 +59,10 @@ class Main extends React.Component {
           phone={this.state.phone}
           linkedin={this.state.linkedin}
           github={this.state.github}
+          pallete={this.state.pallete}
           handleInputData={this.handleInputData}
           updateAvatar={this.updateAvatar}
+          handleColor={this.handleColor}
         />
       </main>
     );

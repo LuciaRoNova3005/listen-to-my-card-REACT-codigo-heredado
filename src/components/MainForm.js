@@ -16,7 +16,10 @@ function MainForm(props) {
       autoComplete="off"
     >
       <Collapsable title="Diseña" icon="far fa-object-ungroup header-icon">
-        <Design></Design>
+        <Design
+          pallete={props.pallete}
+          handleColor={props.handleColor}
+        ></Design>
       </Collapsable>
 
       <Collapsable title="Rellena" icon="far fa-keyboard i-main header-icon">
