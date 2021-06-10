@@ -18,19 +18,19 @@ class Main extends React.Component {
     this.setState({ avatar: avatar });
   }
 
-  handleInputData(ev) {
-    const inputName = ev.currentTarget.name;
-    this.setState({
-      [inputName]: ev.currentTarget.value,
+  handleInputData = (ev) => {
+    setForminput({
+      ...forminput
+      [ev.target.name]: ev.target.value,
     });
-  }
+  };
   render() {
     return (
       <main className="main wrapper">
         <MainPreview name={this.state.name} avatar={this.state.avatar} />
         <MainForm
           name={this.state.name}
-          handleInputData={this.handleInputData}
+          onChange={this.handleInputData}
           avatar={this.state.avatar}
           updateAvatar={this.updateAvatar}
         />

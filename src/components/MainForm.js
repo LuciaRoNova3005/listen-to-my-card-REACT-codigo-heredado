@@ -5,7 +5,6 @@ import Fill from "./Fill";
 import Share from "./Share";
 
 function MainForm(props) {
-  console.log(props);
   return (
     <form
       className="refillable js-form "
@@ -14,6 +13,7 @@ function MainForm(props) {
       id="form"
       className="form"
       autocomplete="off"
+      handleInputData={props.handleInputData}
     >
       <Collapsable title="Diseña" icon="far fa-object-ungroup header-icon">
         <Design></Design>
