@@ -5,22 +5,22 @@ function MainPreview(props) {
   const nameCard = props.name === "" ? "Nombre Apellidos" : props.name;
   const jobCard = props.job === "" ? "Front-end developer" : props.job;
 
-  const palleteCard = () => {
+  /*const palleteCard = (ev) => {
     if (props.pallete === 2) {
-      palleteCard = "opt2";
+      return (palleteCard = "opt2");
     } else if (props.pallete === 3) {
-      palleteCard = "opt3";
+      return (palleteCard = "opt3");
     } else {
-      palleteCard = "opt1";
+      return (palleteCard = "opt1");
     }
-  };
+  };*/
 
   return (
     <section className="page__preview">
       <button className="page__preview--button js-resetButton">
         <i className="far fa-trash-alt"></i>Reset
       </button>
-      <div className={`page__preview--card js-cardElement ${palleteCard}`}>
+      <div className={`page__preview--card js-cardElement opt${props.pallete}`}>
         <div className="preview__card--title-wrapper js-op__wrapper">
           <h2 className="preview__card--title js-namePreview js-op__name">
             {nameCard}

@@ -3,6 +3,7 @@ import Pallete from "./Pallete";
 
 class Design extends React.Component {
   constructor(props) {
+    console.log(props);
     super(props);
   }
 

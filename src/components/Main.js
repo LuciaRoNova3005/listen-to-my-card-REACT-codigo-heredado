@@ -22,9 +22,9 @@ class Main extends React.Component {
   }
 
   handleColor(ev) {
-    const key = ev.target.id;
+    const color = ev.target.id;
     this.setState({
-      [key]: ev.target.value,
+      [color]: ev.target.value,
     });
   }
 
