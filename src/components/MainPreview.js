@@ -20,7 +20,8 @@ function MainPreview(props) {
       <button className="page__preview--button js-resetButton">
         <i className="far fa-trash-alt"></i>Reset
       </button>
-      <div className={`page__preview--card js-cardElement opt${props.pallete}`}>
+      {/* <div className={`page__preview--card js-cardElement opt${props.pallete}`}> */}
+      <div className="page__preview--card js-cardElement opt1">
         <div className="preview__card--title-wrapper js-op__wrapper">
           <h2 className="preview__card--title js-namePreview js-op__name">
             {nameCard}

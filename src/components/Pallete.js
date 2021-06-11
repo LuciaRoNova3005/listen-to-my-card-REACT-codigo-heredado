@@ -21,11 +21,11 @@ class Pallete extends React.Component {
             onChange={this.handleColor}
             name="palette"
             className="selection__options--input js-colorOption js-paletteDefault"
-            checked
+            /* checked={this.props.pallete === this.props.id} */
           />
-          <div className={`palette ${this.props.op1}`}></div>
-          <div className={`palette ${this.props.op2}`}></div>
-          <div className={`palette ${this.props.op3}`}></div>
+          <div className={`palette ${this.props.opt1}`}></div>
+          <div className={`palette ${this.props.opt2}`}></div>
+          <div className={`palette ${this.props.opt3}`}></div>
         </label>
       </div>
     );

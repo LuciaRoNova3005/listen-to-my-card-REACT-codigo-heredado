@@ -16,25 +16,28 @@ class Design extends React.Component {
             <Pallete
               id="1"
               value="1"
-              op1="palette__cold1"
-              op2="palette__cold2"
-              op3="palette__cold3"
+              opt1="palette__cold1"
+              opt2="palette__cold2"
+              opt3="palette__cold3"
+              /* pallete={this.props.pallete} */
               handleColor={this.props.handleColor}
             />
             <Pallete
               id="2"
               value="2"
-              op1="palette__hot1"
-              op2="palette__hot2"
-              op3="palette__hot3"
+              opt1="palette__hot1"
+              opt2="palette__hot2"
+              opt3="palette__hot3"
+              /* pallete={this.props.pallete} */
               handleColor={this.props.handleColor}
             />
             <Pallete
               id="3"
               value="3"
-              op1="palette__mix1"
-              op2="palette__mix2"
-              op3="palette__mix3"
+              opt1="palette__mix1"
+              opt2="palette__mix2"
+              opt3="palette__mix3"
+              /* pallete={this.props.pallete} */
               handleColor={this.props.handleColor}
             />
           </div>
