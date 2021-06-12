@@ -7,6 +7,7 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      pallete: "1",
       name: "",
       job: "",
       avatar: defaultAvatar,
@@ -14,7 +15,6 @@ class Main extends React.Component {
       email: "",
       linkedin: "",
       github: "",
-      pallete: "1",
     };
     this.updateAvatar = this.updateAvatar.bind(this);
     this.handleInputData = this.handleInputData.bind(this);
@@ -42,6 +42,7 @@ class Main extends React.Component {
   handleReset(ev) {
     ev.preventDefault();
     this.setState({
+      palette: "1",
       name: "",
       job: "",
       avatar: defaultAvatar,
@@ -49,7 +50,6 @@ class Main extends React.Component {
       email: "",
       linkedin: "",
       github: "",
-      palette: "1",
     });
   }
 
@@ -80,7 +80,7 @@ class Main extends React.Component {
           handleInputData={this.handleInputData}
           updateAvatar={this.updateAvatar}
           handleColor={this.handleColor}
-          handleReset={this.handleReset}
+          /* handleReset={this.handleReset} */
         />
       </main>
     );
