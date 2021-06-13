@@ -1,8 +1,8 @@
 import React from "react";
-import Collapsable from "./Collapsable";
-import Design from "./Design";
-import Fill from "./Fill";
-import Share from "./Share";
+import Collapsable from "../Card/Collapsable";
+import Design from "../Card/Design";
+import Fill from "../Card/Fill";
+import Share from "../Card/Share";
 
 function MainForm(props) {
   console.log(props);
@@ -14,11 +14,13 @@ function MainForm(props) {
       id="form"
       className="form"
       autoComplete="off"
+      /* handleReset={props.handleReset} */
     >
       <Collapsable title="Diseña" icon="far fa-object-ungroup header-icon">
         <Design
           pallete={props.pallete}
           handleColor={props.handleColor}
+          handleReset={props.handleReset}
         ></Design>
       </Collapsable>
 
@@ -33,6 +35,7 @@ function MainForm(props) {
           github={props.github}
           handleInputData={props.handleInputData}
           updateAvatar={props.updateAvatar}
+          /*  handleReset={props.handleReset} */
         ></Fill>
       </Collapsable>
 

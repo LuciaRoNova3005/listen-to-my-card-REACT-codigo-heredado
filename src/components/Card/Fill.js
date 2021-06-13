@@ -1,5 +1,5 @@
 import React from "react";
-import GetAvatar from "./GetAvatar";
+import GetAvatar from "../Card/GetAvatar";
 
 const Fill = (props) => {
   return (

@@ -3,6 +3,11 @@ import React from "react";
 class Pallete extends React.Component {
   constructor(props) {
     super(props);
+    this.handleColor = this.handleColor.bind(this);
+  }
+
+  handleColor() {
+    this.props.handleColor(this.props.id);
   }
 
   render() {
@@ -12,13 +17,14 @@ class Pallete extends React.Component {
           <input
             id={this.props.id}
             type="radio"
-            value={this.props.value}
-            onChange={this.props.handleColor}
+            onChange={this.handleColor}
+            name="palette"
             className="selection__options--input js-colorOption js-paletteDefault"
+            checked={this.props.pallete === this.props.value}
           />
-          <div className={`palette ${this.props.op1}`}></div>
-          <div className={`palette ${this.props.op2}`}></div>
-          <div className={`palette ${this.props.op3}`}></div>
+          <div className={`palette ${this.props.opt1}`}></div>
+          <div className={`palette ${this.props.opt2}`}></div>
+          <div className={`palette ${this.props.opt3}`}></div>
         </label>
       </div>
     );

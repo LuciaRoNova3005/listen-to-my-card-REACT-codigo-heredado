@@ -1,5 +1,5 @@
 import React from "react";
-import Twitter from "./Twitter";
+import Twitter from "../Card/Twitter";
 
 class Sharecard extends React.Component {
   render() {
