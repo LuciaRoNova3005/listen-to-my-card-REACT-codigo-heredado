@@ -4,23 +4,14 @@ import Profile from "./Profile";
 function MainPreview(props) {
   const nameCard = props.name === "" ? "Nombre Apellidos" : props.name;
   const jobCard = props.job === "" ? "Front-end developer" : props.job;
-
-  /*const palleteCard = (ev) => {
-    if (props.pallete === 2) {
-      return (palleteCard = "opt2");
-    } else if (props.pallete === 3) {
-      return (palleteCard = "opt3");
-    } else {
-      return (palleteCard = "opt1");
-    }
-  };*/
+  const Color = props.value;
 
   return (
     <section className="page__preview">
       <button className="page__preview--button js-resetButton">
         <i className="far fa-trash-alt"></i>Reset
       </button>
-      <div className={`page__preview--card js-cardElement opt${props.pallete}`}>
+      <div className={`page__preview--card js-cardElement opt${props.value}`}>
         <div className="preview__card--title-wrapper js-op__wrapper">
           <h2 className="preview__card--title js-namePreview js-op__name">
             {nameCard}
