@@ -1,7 +1,7 @@
 import React from "react";
-import MainPreview from "./MainPreview";
-import MainForm from "./MainForm";
-import defaultAvatar from "../images/listen-logo.png";
+import MainPreview from "../Card/MainPreview";
+import MainForm from "../Card/MainForm";
+import defaultAvatar from "../../images/listen-logo.png";
 
 class Main extends React.Component {
   constructor(props) {

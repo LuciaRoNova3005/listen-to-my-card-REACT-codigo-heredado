@@ -1,8 +1,8 @@
 import React from "react";
-import Collapsable from "./Collapsable";
-import Design from "./Design";
-import Fill from "./Fill";
-import Share from "./Share";
+import Collapsable from "../Card/Collapsable";
+import Design from "../Card/Design";
+import Fill from "../Card/Fill";
+import Share from "../Card/Share";
 
 function MainForm(props) {
   console.log(props);

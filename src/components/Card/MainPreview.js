@@ -1,5 +1,5 @@
 import React from "react";
-import Profile from "./Profile";
+import Profile from "../Card/Profile";
 
 function MainPreview(props) {
   const nameCard = props.name === "" ? "Nombre Apellidos" : props.name;

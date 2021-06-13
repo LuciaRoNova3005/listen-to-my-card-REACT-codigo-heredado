@@ -1,5 +1,5 @@
 import React from "react";
-import Pallete from "./Pallete";
+import Pallete from "../Card/Pallete";
 
 class Design extends React.Component {
   constructor(props) {

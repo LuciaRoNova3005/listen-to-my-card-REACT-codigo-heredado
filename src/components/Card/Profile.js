@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import defaultAvatar from "../images/listen-logo.png";
+import defaultAvatar from "../../images/listen-logo.png";
 // import '../stylesheets/Profile.css';
 
 class Profile extends React.Component {
