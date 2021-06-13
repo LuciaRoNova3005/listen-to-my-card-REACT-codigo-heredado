@@ -1,5 +1,5 @@
 import React from "react";
-import logoAda from "../images/logo-adalab.png";
+import logoAda from "../../images/logo-adalab.png";
 
 function Footer() {
   return (

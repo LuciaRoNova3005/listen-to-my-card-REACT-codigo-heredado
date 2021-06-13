@@ -1,26 +1,32 @@
 import React from "react";
-import Profile from "./Profile";
+import Profile from "../Card/Profile";
 
 function MainPreview(props) {
   const nameCard = props.name === "" ? "Nombre Apellidos" : props.name;
   const jobCard = props.job === "" ? "Front-end developer" : props.job;
+  let colorPallete = "";
 
-  /*const palleteCard = (ev) => {
-    if (props.pallete === 2) {
-      return (palleteCard = "opt2");
-    } else if (props.pallete === 3) {
-      return (palleteCard = "opt3");
+  const palleteCard = () => {
+    if (props.pallete === "1") {
+      colorPallete = "opt1";
+    } else if (props.pallete === "2") {
+      colorPallete = "opt2";
     } else {
-      return (palleteCard = "opt1");
+      colorPallete = "opt3";
     }
-  };*/
+    return colorPallete;
+  };
 
   return (
     <section className="page__preview">
-      <button className="page__preview--button js-resetButton">
+      <button
+        className="page__preview--button js-resetButton"
+        onClick={props.handleReset}
+      >
         <i className="far fa-trash-alt"></i>Reset
       </button>
-      <div className={`page__preview--card js-cardElement opt${props.pallete}`}>
+
+      <div className={`page__preview--card js-cardElement ${palleteCard()}`}>
         <div className="preview__card--title-wrapper js-op__wrapper">
           <h2 className="preview__card--title js-namePreview js-op__name">
             {nameCard}

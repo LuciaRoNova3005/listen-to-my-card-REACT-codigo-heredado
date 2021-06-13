@@ -1,7 +1,7 @@
 import React from "react";
-import ListenLogo from "../images/listen-logo.png";
-import TezCadey from "../images/Tez-Cadey-Seve.mp3";
-import TezCadeyOgg from "../images/Tez-Cadey-Seve.ogg";
+import ListenLogo from "../..//images/listen-logo.png";
+import TezCadey from "../../images/Tez-Cadey-Seve.mp3";
+import TezCadeyOgg from "../../images/Tez-Cadey-Seve.ogg";
 
 function Header() {
   return (

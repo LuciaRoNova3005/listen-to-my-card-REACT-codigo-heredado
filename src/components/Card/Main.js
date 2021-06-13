@@ -1,12 +1,13 @@
 import React from "react";
-import MainPreview from "./MainPreview";
-import MainForm from "./MainForm";
-import defaultAvatar from "../images/listen-logo.png";
+import MainPreview from "../Card/MainPreview";
+import MainForm from "../Card/MainForm";
+import defaultAvatar from "../../images/listen-logo.png";
 
 class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      pallete: "1",
       name: "",
       job: "",
       avatar: defaultAvatar,
@@ -14,17 +15,16 @@ class Main extends React.Component {
       email: "",
       linkedin: "",
       github: "",
-      pallete: "1",
     };
     this.updateAvatar = this.updateAvatar.bind(this);
     this.handleInputData = this.handleInputData.bind(this);
     this.handleColor = this.handleColor.bind(this);
+    this.handleReset = this.handleReset.bind(this);
   }
 
-  handleColor(ev) {
-    const color = ev.target.id;
+  handleColor(value) {
     this.setState({
-      [color]: ev.target.value,
+      pallete: value,
     });
   }
 
@@ -38,7 +38,23 @@ class Main extends React.Component {
       [key]: ev.currentTarget.value,
     });
   }
+
+  handleReset(ev) {
+    ev.preventDefault();
+    this.setState({
+      palette: "1",
+      name: "",
+      job: "",
+      avatar: defaultAvatar,
+      phone: "",
+      email: "",
+      linkedin: "",
+      github: "",
+    });
+  }
+
   render() {
+    console.log(this.state.pallete);
     return (
       <main className="main wrapper">
         <MainPreview
@@ -50,6 +66,7 @@ class Main extends React.Component {
           linkedin={this.state.linkedin}
           github={this.state.github}
           pallete={this.state.pallete}
+          handleReset={this.handleReset}
         />
         <MainForm
           name={this.state.name}
@@ -63,6 +80,7 @@ class Main extends React.Component {
           handleInputData={this.handleInputData}
           updateAvatar={this.updateAvatar}
           handleColor={this.handleColor}
+          /* handleReset={this.handleReset} */
         />
       </main>
     );
