@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Listenlog from "../../images/listen-logo.png";
 
 const Landing2 = (props) => {
   return (
     <div>
       <main class="landing central-column">
         <img
-          src="../images/listen-logo.png"
+          src={Listenlog}
           alt="logo-awesome-profile-cards"
           class="landing__logo"
         />
