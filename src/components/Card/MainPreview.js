@@ -7,6 +7,7 @@ function MainPreview(props) {
   let colorPallete = "";
 
   const palleteCard = () => {
+    console.log(props);
     if (props.pallete === "1") {
       colorPallete = "opt1";
     } else if (props.pallete === "2") {
