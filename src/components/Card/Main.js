@@ -2,7 +2,7 @@ import React from "react";
 import MainPreview from "../Card/MainPreview";
 import MainForm from "../Card/MainForm";
 import defaultAvatar from "../../images/listen-logo.png";
-/* import getApiData from "../../services/Api"; */
+/* import getApiCard from "../../services/Api"; */
 /* import ls from "../../services/LocalStorage"; */
 
 class Main extends React.Component {
@@ -18,11 +18,18 @@ class Main extends React.Component {
       linkedin: "",
       github: "",
     };
+
     this.updateAvatar = this.updateAvatar.bind(this);
     this.handleInputData = this.handleInputData.bind(this);
     this.handleColor = this.handleColor.bind(this);
     this.handleReset = this.handleReset.bind(this);
   }
+
+  /*  componentDidMount() {};
+  
+  handleApi() {
+    this.getApiCard().then( this.state=>this.setState);
+  } */
 
   handleColor(value) {
     this.setState({

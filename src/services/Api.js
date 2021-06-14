@@ -1,4 +1,4 @@
-/* const getApiData = (dataCard) => {
+/* const getApiCard = (dataCard) => {
   return fetch("https://awesome-profile-cards.herokuapp.com/card", {
     method: "POST",
     body: JSON.stringify(dataCard),
@@ -12,4 +12,4 @@
     });
 };
 
-export default getApiData; */
+export default getApiCard; */
