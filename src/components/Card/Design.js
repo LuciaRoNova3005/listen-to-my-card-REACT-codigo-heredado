@@ -14,6 +14,7 @@ class Design extends React.Component {
           <h3 className="selection__title">Colores</h3>
           <div className="selection__options">
             <Pallete
+              htmlFor="1"
               id="1"
               value="1"
               pallete={this.props.pallete}
@@ -24,6 +25,7 @@ class Design extends React.Component {
               handleColor={this.props.handleColor}
             />
             <Pallete
+              htmlFor="2"
               id="2"
               value="2"
               pallete={this.props.pallete}
@@ -34,6 +36,7 @@ class Design extends React.Component {
               handleColor={this.props.handleColor}
             />
             <Pallete
+              htmlFor="3"
               id="3"
               value="3"
               opt1="palette__mix1"

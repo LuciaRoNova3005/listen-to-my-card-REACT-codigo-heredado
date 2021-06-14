@@ -13,7 +13,7 @@ class Pallete extends React.Component {
   render() {
     return (
       <div>
-        <label htmlFor="coloroption1" className="selection__options--palette">
+        <label htmlFor={this.props.id} className="selection__options--palette">
           <input
             id={this.props.id}
             type="radio"
