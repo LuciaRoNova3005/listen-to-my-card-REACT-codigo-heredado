@@ -41,8 +41,9 @@ class Main extends React.Component {
 
   handleReset(ev) {
     ev.preventDefault();
+ 
     this.setState({
-      palette: "1",
+      pallete: "1",
       name: "",
       job: "",
       avatar: defaultAvatar,
@@ -51,10 +52,13 @@ class Main extends React.Component {
       linkedin: "",
       github: "",
     });
+
+
+  
   }
 
   render() {
-    console.log(this.state.pallete);
+   
     return (
       <main className="main wrapper">
         <MainPreview
@@ -80,7 +84,7 @@ class Main extends React.Component {
           handleInputData={this.handleInputData}
           updateAvatar={this.updateAvatar}
           handleColor={this.handleColor}
-          /* handleReset={this.handleReset} */
+          // handleReset={this.handleReset} 
         />
       </main>
     );

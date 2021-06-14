@@ -35,7 +35,7 @@ function MainForm(props) {
           github={props.github}
           handleInputData={props.handleInputData}
           updateAvatar={props.updateAvatar}
-          /*  handleReset={props.handleReset} */
+          // handleReset={props.handleReset}
         ></Fill>
       </Collapsable>
 
