@@ -2,6 +2,8 @@ import React from "react";
 import MainPreview from "../Card/MainPreview";
 import MainForm from "../Card/MainForm";
 import defaultAvatar from "../../images/listen-logo.png";
+/* import getApiData from "../../services/Api"; */
+/* import ls from "../../services/LocalStorage"; */
 
 class Main extends React.Component {
   constructor(props) {
@@ -41,7 +43,7 @@ class Main extends React.Component {
 
   handleReset(ev) {
     ev.preventDefault();
- 
+
     this.setState({
       pallete: "1",
       name: "",
@@ -52,13 +54,9 @@ class Main extends React.Component {
       linkedin: "",
       github: "",
     });
-
-
-  
   }
 
   render() {
-   
     return (
       <main className="main wrapper">
         <MainPreview
@@ -84,7 +82,7 @@ class Main extends React.Component {
           handleInputData={this.handleInputData}
           updateAvatar={this.updateAvatar}
           handleColor={this.handleColor}
-          // handleReset={this.handleReset} 
+          // handleReset={this.handleReset}
         />
       </main>
     );
