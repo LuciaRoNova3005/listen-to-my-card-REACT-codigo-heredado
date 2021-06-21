@@ -2,8 +2,8 @@ import React from "react";
 import MainPreview from "../Card/MainPreview";
 import MainForm from "../Card/MainForm";
 import defaultAvatar from "../../images/listen-logo.png";
-/* import getApiCard from "../../services/Api"; */
-/* import ls from "../../services/LocalStorage"; */
+/* import getApiCard from "../../services/Api";  */
+import ls from "../../services/LocalStorage";
 
 class Main extends React.Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class Main extends React.Component {
       pallete: "1",
       name: "",
       job: "",
-      avatar: defaultAvatar,
+      image: defaultAvatar,
       phone: "",
       email: "",
       linkedin: "",
@@ -25,11 +25,25 @@ class Main extends React.Component {
     this.handleReset = this.handleReset.bind(this);
   }
 
-  /*  componentDidMount() {};
-  
-  handleApi() {
-    this.getApiCard().then( this.state=>this.setState);
-  } */
+  componentDidMount() {
+    if (ls.get("data")) {
+      const localData = ls.get("data");
+      this.setState(localData);
+    }
+  }
+
+  componentDidUpdate() {
+    ls.set("data", this.state);
+  }
+
+  handleChange(ev) {
+    const value = ev.target.value;
+    const key = ev.target.name;
+    const data = {
+      [key]: value,
+    };
+    this.setState(data);
+  }
 
   handleColor(value) {
     this.setState({
@@ -38,7 +52,7 @@ class Main extends React.Component {
   }
 
   updateAvatar(avatar) {
-    this.setState({ avatar: avatar });
+    this.setState({ image: avatar });
   }
 
   handleInputData(ev) {
@@ -55,7 +69,7 @@ class Main extends React.Component {
       pallete: "1",
       name: "",
       job: "",
-      avatar: defaultAvatar,
+      image: defaultAvatar,
       phone: "",
       email: "",
       linkedin: "",
@@ -69,7 +83,7 @@ class Main extends React.Component {
         <MainPreview
           name={this.state.name}
           job={this.state.job}
-          avatar={this.state.avatar}
+          image={this.state.image}
           email={this.state.email}
           phone={this.state.phone}
           linkedin={this.state.linkedin}
@@ -80,7 +94,7 @@ class Main extends React.Component {
         <MainForm
           name={this.state.name}
           job={this.state.job}
-          avatar={this.state.avatar}
+          image={this.state.image}
           email={this.state.email}
           phone={this.state.phone}
           linkedin={this.state.linkedin}

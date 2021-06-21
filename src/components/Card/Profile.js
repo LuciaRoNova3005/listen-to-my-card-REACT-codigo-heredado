@@ -5,7 +5,7 @@ import defaultAvatar from "../../images/listen-logo.png";
 
 class Profile extends React.Component {
   render() {
-    const avatar = this.props.avatar === "" ? defaultAvatar : this.props.avatar;
+    const avatar = this.props.image === "" ? defaultAvatar : this.props.image;
     return (
       <>
         <div
@@ -17,7 +17,7 @@ class Profile extends React.Component {
   }
 }
 Profile.propTypes = {
-  avatar: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
 };
 
 export default Profile;

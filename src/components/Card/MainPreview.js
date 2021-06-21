@@ -35,7 +35,7 @@ function MainPreview(props) {
           <h3 className="preview__card--subtitle js-jobPreview">{jobCard}</h3>
         </div>
         <div className="preview__card--image js-imgPreview">
-          <Profile avatar={props.avatar} />
+          <Profile image={props.image} />
         </div>
 
         <ul className="preview__card--rrss">

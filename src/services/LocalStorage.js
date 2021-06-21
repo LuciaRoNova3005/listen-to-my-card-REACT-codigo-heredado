@@ -1,10 +1,6 @@
-/* const get = (key, defaultCard) => {
+const get = (key, defaultCard) => {
   const data = localStorage.getItem(key);
-  if (data === null) {
-    return defaultCard;
-  } else {
-    return JSON.parse(data);
-  }
+  return JSON.parse(data);
 };
 
 const set = (key, value) => {
@@ -16,4 +12,4 @@ const objToExport = {
   set: set,
 };
 
-export default objToExport; */
+export default objToExport;

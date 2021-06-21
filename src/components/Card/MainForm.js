@@ -28,7 +28,7 @@ function MainForm(props) {
         <Fill
           name={props.name}
           job={props.job}
-          avatar={props.avatar}
+          image={props.image}
           email={props.email}
           phone={props.phone}
           linkedin={props.linkedin}
