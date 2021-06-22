@@ -51,7 +51,10 @@ class Share extends React.Component {
       <fieldset className="section-share container">
         <div className="hidden-content">
           <div className="button-container">
-            <button className="share-button js-create-card share-button2">
+            <button
+              onClick={this.handleFetch}
+              className="share-button js-create-card share-button2"
+            >
               <i className="far fa-address-card address-card-icon"></i>
               crear tarjeta
             </button>
