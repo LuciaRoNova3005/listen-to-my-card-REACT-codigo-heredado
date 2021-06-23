@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "build": "cd web && npm run build && cd .. && rm -rf public && mv web/build public"
   },
   "author": "adalab",
   "license": "ISC",
