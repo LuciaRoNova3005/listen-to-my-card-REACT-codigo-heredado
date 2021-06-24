@@ -48,6 +48,12 @@ class Share extends React.Component {
   }
 
   render() {
+    let nohidden = "";
+    if (this.state.response === "") {
+      nohidden = "set-up-container js-response js-hiddenTwitter";
+    } else {
+      nohidden = "set-up-container js-response";
+    }
     return (
       <fieldset className="section-share container">
         <div className="hidden-content">
@@ -59,7 +65,8 @@ class Share extends React.Component {
               <i className="far fa-address-card address-card-icon"></i>
               crear tarjeta
             </button>
-            <div className="set-up-container js-response js-hiddenTwitter"></div>
+            <div className={nohidden}>{this.state.response}</div>
+            <div className={nohidden}></div>
           </div>
         </div>
       </fieldset>
