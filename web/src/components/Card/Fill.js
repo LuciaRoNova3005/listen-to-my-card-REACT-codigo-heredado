@@ -38,7 +38,7 @@ const Fill = (props) => {
         </label>
         <div className="action">
           <GetAvatar
-            avatar={props.avatar}
+            image={props.image}
             updateAvatar={props.updateAvatar}
           ></GetAvatar>
         </div>

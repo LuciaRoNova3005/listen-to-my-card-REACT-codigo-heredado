@@ -8,11 +8,10 @@ function MainForm(props) {
   console.log(props);
   return (
     <form
-      className="refillable js-form "
+      className="refillable js-form form"
       action="/signup"
       method="post"
       id="form"
-      className="form"
       autoComplete="off"
       /* handleReset={props.handleReset} */
     >
@@ -40,7 +39,16 @@ function MainForm(props) {
       </Collapsable>
 
       <Collapsable title="Comparte" icon="fas fa-share-alt header-icon">
-        <Share></Share>
+        <Share
+          pallete={props.pallete}
+          name={props.name}
+          job={props.job}
+          image={props.image}
+          email={props.email}
+          phone={props.phone}
+          linkedin={props.linkedin}
+          github={props.github}
+        ></Share>
       </Collapsable>
     </form>
   );

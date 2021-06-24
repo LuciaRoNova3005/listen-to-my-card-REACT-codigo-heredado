@@ -15,31 +15,32 @@ class Share extends React.Component {
 
   handleFetch(ev) {
     ev.preventDefault();
-    this.userData = this.props;
+    this.userCard = this.props;
+    console.log(this.userCard);
     if (this.props.name === "") {
-      this.setState({ response: "Debes rellenar el nombre" });
+      this.setState({ response: "Rellena el campo con tu nombre" });
     } else if (this.props.job === "") {
-      this.setState({ response: "Debes rellenar el puesto" });
-    } else if (this.props.photo === "") {
-      this.setState({ response: "Debes rellenar la imagen" });
+      this.setState({ response: "Rellena el campo con tu puesto" });
+    } else if (this.props.image === "") {
+      this.setState({ response: "Rellena el campo con tu imagen" });
     } else if (this.props.email === "") {
-      this.setState({ response: "Debes rellenar el email" });
+      this.setState({ response: "Rellena el campo con tu email" });
     } else if (this.props.linkedin === "") {
-      this.setState({ response: "Debes rellenar el linkedin" });
+      this.setState({ response: "Rellena el campo con tu linkedin" });
     } else if (this.props.github === "") {
-      this.setState({ response: "Debes rellenar el github" });
+      this.setState({ response: "Rellena el campo con tu github" });
     } else if (this.props.phone === "") {
-      this.setState({ response: "Debes rellenar el teléfono" });
+      this.setState({ response: "Rellena el campo con tu teléfono" });
     } else {
-      getApiCard(this.userData).then((resultData) => {
-        if (resultData.success === false) {
-          console.log(this.userData);
+      getApiCard(this.userCard).then((resultCard) => {
+        if (resultCard.success === false) {
+          console.log(this.userCard);
           this.setState({ response: "Faltan datos por llenar" });
         } else {
-          console.log(resultData);
+          console.log(resultCard);
           this.setState({
             response: true,
-            url: resultData.cardURL,
+            url: resultCard.cardURL,
           });
         }
       });
