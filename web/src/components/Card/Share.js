@@ -74,3 +74,56 @@ class Share extends React.Component {
   }
 }
 export default Share;
+
+/* render() {
+  let twitter = "";
+  let warning = "";
+  let share = "hidden-twitter";
+  if (this.state.response === "") {
+    twitter = "set-up-container js-response js-hiddenTwitter";
+    warning = "text-set-up";
+  } else {
+    twitter =
+      "set-up-container js-response js-hiddenTwitter set-up-container-top";
+    warning = "text-set-up";
+    share = "";
+  }
+  return (
+    <fieldset className="section-share container">
+      <div className="hidden-content">
+        <div className="button-container">
+          <button
+            onClick={this.handleFetch}
+            className="share-button js-create-card share-button2"
+          >
+            <i className="far fa-address-card address-card-icon"></i>
+            crear tarjeta
+          </button>
+          <div className={warning}>{this.state.response}</div>
+          <div className={twitter}></div>
+          <div className={share}>
+            <h3 class="text-set-up">La tarjeta ha sido creada:</h3>
+            <p>
+              <a
+                href="wwww"
+                class="link-set-up js-twitter-link"
+                target="_blank"
+              >
+                URL
+              </a>
+            </p>
+            <a
+              class="twitter-button js-btn-twitter"
+              target="_blank"
+              href="wwww"
+            >
+              <i class="fa fa-twitter"></i> Compartir en Twitter
+            </a>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  );
+}
+}
+export default Share; */
