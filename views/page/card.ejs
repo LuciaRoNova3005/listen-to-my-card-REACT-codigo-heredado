@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/8f7d6eb3e3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./assets/images/favicon-ltmc.png" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <title>Awesome profile-cards</title>
+  </head>
+
+  <body>
+    <section class="page__preview">
+      <div class="page__preview--card js-cardElement <%=palette %>">
+        <div class="preview__card--title-wrapper js-op__wrapper">
+          <h2 class="preview__card--title js-namePreview js-op__name">
+            <%= name %>
+          </h2>
+          <h3 class="preview__card--subtitle js-jobPreview"><%= job %></h3>
+        </div>
+        <div class="preview__card--image js-imgPreview"></div>
+        <ul class="preview__card--rrss">
+          <li class="rrss-item js-op__circle js-op1__circle1">
+            <a
+              class="
+                rrss-link
+                fas
+                fa-mobile-alt
+                js-telPreview
+                js-op__icon
+                js-op1__icon1
+              "
+              href="tel:
+              <%=phone
+              %
+            >"
+              target="_blank"
+            ></a>
+          </li>
+          <li class="rrss-item js-op__circle js-op1__circle2">
+            <a
+              class="
+                rrss-link
+                fas
+                fa-envelope
+                js-mailPreview
+                js-op__icon
+                js-op1__icon2
+              "
+              href="mailto:<%=email %>"
+              target="_blank"
+            ></a>
+          </li>
+          <li class="rrss-item js-op__circle js-op1__circle3">
+            <a
+              class="
+                rrss-link
+                fab
+                fa-linkedin-in
+                js-linkedinPreview
+                js-op__icon
+                js-op1__icon3
+              "
+              href="https://www.linkedin.com/in/<%=linkedin%>"
+              target="_blank"
+              ><div class="icon"></div
+            ></a>
+          </li>
+          <li class="rrss-item js-op__circle js-op1__circle4">
+            <a
+              class="
+                rrss-link
+                fab
+                fa-github-alt
+                js-gitHubPreview
+                js-op__icon
+                js-op1__icon4
+              "
+              href="https://github.com/<%=github%>"
+              target="_blank"
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>

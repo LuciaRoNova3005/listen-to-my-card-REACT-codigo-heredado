@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const Database = require("better-sqlite3");
 
 // create server
 const server = express();
@@ -42,7 +43,7 @@ server.post("/card", (req, res) => {
       error: "Inténtalo más tarde :) !",
     };
     res.json(response);
-   } else {
+  } else {
     // Falta bbdd que nos devolvera cardID
     const response = {
       success: true,
@@ -56,3 +57,11 @@ server.post("/card", (req, res) => {
 // };
 // res.json(response);
 //});
+
+//static servers:
+const staticServerPathCard = "./";
+server.use(express.static(staticServerPathCard));
+const staticServerPathWeb = "./";
+server.use(express.static(staticServerPathWeb));
+
+const db = new Database("./src");
