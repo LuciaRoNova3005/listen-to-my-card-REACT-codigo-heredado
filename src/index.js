@@ -9,7 +9,7 @@ server.use(express.json());
 server.use(cors());
 
 // init express aplication
-const serverPort = 4000;
+const serverPort = process.env.PORT || 4000;
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
@@ -17,6 +17,10 @@ server.listen(serverPort, () => {
 // static server
 const staticServerPath = "./public";
 server.use(express.static(staticServerPath));
+
+const db = new Database("./src/database.db", {
+  verbose: console.log,
+});
 
 // api
 
@@ -57,11 +61,3 @@ server.post("/card", (req, res) => {
 // };
 // res.json(response);
 //});
-
-//static servers:
-const staticServerPathCard = "./";
-server.use(express.static(staticServerPathCard));
-const staticServerPathWeb = "./";
-server.use(express.static(staticServerPathWeb));
-
-const db = new Database("./src");

@@ -13,7 +13,10 @@
       rel="stylesheet"
     />
     <link rel="icon" href="./assets/images/favicon-ltmc.png" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="../../public/static/css/main.4d330ba1.chunk.css"
+    />
     <title>Awesome profile-cards</title>
   </head>
 
@@ -26,7 +29,16 @@
           </h2>
           <h3 class="preview__card--subtitle js-jobPreview"><%= job %></h3>
         </div>
-        <div class="preview__card--image js-imgPreview"></div>
+        <div
+          class="preview__card--image js-imgPreview"
+          style="
+            width: 100%;
+            height: rem(200);
+            background-image: url('<%= image %>');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
         <ul class="preview__card--rrss">
           <li class="rrss-item js-op__circle js-op1__circle1">
             <a
