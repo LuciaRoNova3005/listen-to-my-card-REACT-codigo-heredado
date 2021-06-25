@@ -16,7 +16,7 @@ class Share extends React.Component {
   handleFetch(ev) {
     ev.preventDefault();
     this.userCard = this.props;
-    console.log(this.userCard);
+    //console.log(this.userCard);
     if (this.props.name === "") {
       this.setState({ response: "Rellena el campo con tu nombre" });
     } else if (this.props.job === "") {
