@@ -29,6 +29,8 @@ server.get("/card/:id", (req, res) => {
   console.log(data);
   if (data !== undefined) {
     res.render("page/card", data);
+  } else {
+    res.render("page/card-not-found");
   }
 });
 
