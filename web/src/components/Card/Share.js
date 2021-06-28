@@ -7,7 +7,7 @@ class Share extends React.Component {
 
     this.state = {
       response: "",
-      url: "",
+      url: "sfdwffdd",
     };
 
     this.handleFetch = this.handleFetch.bind(this);
@@ -16,13 +16,11 @@ class Share extends React.Component {
   handleFetch(ev) {
     ev.preventDefault();
     this.userCard = this.props;
-    //console.log(this.userCard);
+    console.log(this.userCard);
     if (this.props.name === "") {
       this.setState({ response: "Rellena el campo con tu nombre" });
     } else if (this.props.job === "") {
       this.setState({ response: "Rellena el campo con tu puesto" });
-    } else if (this.props.image === "") {
-      this.setState({ response: "Rellena el campo con tu imagen" });
     } else if (this.props.email === "") {
       this.setState({ response: "Rellena el campo con tu email" });
     } else if (this.props.linkedin === "") {
@@ -47,7 +45,7 @@ class Share extends React.Component {
     }
   }
 
-  render() {
+  /* render() {
     let nohidden = "";
     if (this.state.response === "") {
       nohidden = "set-up-container js-response js-hiddenTwitter";
@@ -73,57 +71,59 @@ class Share extends React.Component {
     );
   }
 }
-export default Share;
+export default Share; */
 
-/* render() {
-  let twitter = "";
-  let warning = "";
-  let share = "hidden-twitter";
-  if (this.state.response === "") {
-    twitter = "set-up-container js-response js-hiddenTwitter";
-    warning = "text-set-up";
-  } else {
-    twitter =
-      "set-up-container js-response js-hiddenTwitter set-up-container-top";
-    warning = "text-set-up";
-    share = "";
-  }
-  return (
-    <fieldset className="section-share container">
-      <div className="hidden-content">
-        <div className="button-container">
-          <button
-            onClick={this.handleFetch}
-            className="share-button js-create-card share-button2"
-          >
-            <i className="far fa-address-card address-card-icon"></i>
-            crear tarjeta
-          </button>
-          <div className={warning}>{this.state.response}</div>
-          <div className={twitter}></div>
-          <div className={share}>
-            <h3 class="text-set-up">La tarjeta ha sido creada:</h3>
-            <p>
-              <a
-                href="wwww"
-                class="link-set-up js-twitter-link"
-                target="_blank"
-              >
-                URL
-              </a>
-            </p>
-            <a
-              class="twitter-button js-btn-twitter"
-              target="_blank"
-              href="wwww"
+  render() {
+    let twitter = "";
+    let warning = "";
+    let share = "hidden-share";
+    console.log(this.state.url);
+    console.log("fdfdg");
+
+    if (this.state.response !== true) {
+      twitter = "set-up-container js-response js-hiddenTwitter";
+      warning = "text-set-up";
+    } else {
+      twitter = "set-up-container js-response set-up-container-top";
+      warning = "text-set-up";
+      share = "show-share";
+    }
+    return (
+      <fieldset className="section-share container">
+        <div className="hidden-content">
+          <div className="button-container">
+            <button
+              onClick={this.handleFetch}
+              className="share-button js-create-card share-button2"
             >
-              <i class="fa fa-twitter"></i> Compartir en Twitter
-            </a>
+              <i className="far fa-address-card address-card-icon"></i>
+              crear tarjeta
+            </button>
+            <div className={warning}>{this.state.response}</div>
+            <div className={twitter}></div>
+            <div className={share}>
+              <h3 class="text-set-up">La tarjeta ha sido creada:</h3>
+              <p>
+                <a
+                  href="wwww"
+                  class="link-set-up js-twitter-link"
+                  target="_blank"
+                >
+                  URL
+                </a>
+              </p>
+              <a
+                class="twitter-button js-btn-twitter"
+                target="_blank"
+                href="wwww"
+              >
+                <i class="fa fa-twitter"></i> Compartir en Twitter
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </fieldset>
-  );
+      </fieldset>
+    );
+  }
 }
-}
-export default Share; */
+export default Share;

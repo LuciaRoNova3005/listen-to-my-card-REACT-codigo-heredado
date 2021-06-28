@@ -4,9 +4,10 @@ const Database = require("better-sqlite3");
 
 // create server
 const server = express();
-
 server.use(express.json());
 server.use(cors());
+server.set("view engine", "ejs");
+server.use(express.json({ limit: "10mb" }));
 
 // init express aplication
 const serverPort = process.env.PORT || 4000;
@@ -22,12 +23,14 @@ const db = new Database("./src/database.db", {
   verbose: console.log,
 });
 
-// api
-
-// server.get("/card/", (req, res) => {
-//   const response = {};
-//   res.json(response);
-// });
+server.get("/card/:id", (req, res) => {
+  const query = db.prepare(`SELECT * from card where id= ?`);
+  const data = query.get(req.params.id);
+  console.log(data);
+  if (data !== undefined) {
+    res.render("page/card", data);
+  }
+});
 
 server.post("/card", (req, res) => {
   if (
@@ -42,10 +45,12 @@ server.post("/card", (req, res) => {
   ) {
     const response = {
       success: false,
-      error: "Inténtalo más tarde :) !",
+      error: "Rellena todos los campos",
     };
     res.json(response);
   } else {
+    //insertar en la bd
+
     const response = {
       success: true,
       cardURL: "https://awesome-profile-cards.herokuapp.com/card/${cardId}",
@@ -53,8 +58,3 @@ server.post("/card", (req, res) => {
     res.json(response);
   }
 });
-// const response = {
-//result: `User created: ${req.body.userName}`,
-// };
-// res.json(response);
-//});
