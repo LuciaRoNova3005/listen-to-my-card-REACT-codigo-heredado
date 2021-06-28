@@ -24,10 +24,8 @@ const db = new Database("./src/database.db", {
 
 // api
 
-// server.get("/users", (req, res) => {
-//   const response = {
-//     users: [{ name: "Sofía" }, { name: "María" }],
-//   };
+// server.get("/card/", (req, res) => {
+//   const response = {};
 //   res.json(response);
 // });
 
@@ -48,7 +46,6 @@ server.post("/card", (req, res) => {
     };
     res.json(response);
   } else {
-    // Falta bbdd que nos devolvera cardID
     const response = {
       success: true,
       cardURL: "https://awesome-profile-cards.herokuapp.com/card/${cardId}",
