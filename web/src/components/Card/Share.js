@@ -79,6 +79,7 @@ export default Share; */
     let share = "hidden-share";
     console.log(this.state.url);
     console.log("fdfdg");
+    
 
     if (this.state.response !== true) {
       twitter = "set-up-container js-response js-hiddenTwitter";
@@ -105,11 +106,11 @@ export default Share; */
               <h3 class="text-set-up">La tarjeta ha sido creada:</h3>
               <p>
                 <a
-                  href="wwww"
+                  href={this.state.url}
                   class="link-set-up js-twitter-link"
                   target="_blank"
                 >
-                  URL
+                  {this.state.url}
                 </a>
               </p>
               <a
