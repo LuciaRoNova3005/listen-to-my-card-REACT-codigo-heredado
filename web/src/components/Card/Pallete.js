@@ -13,18 +13,18 @@ class Pallete extends React.Component {
   render() {
     return (
       <div>
-        <label htmlFor={this.props.id} className="selection__options--palette">
+        <label htmlFor={this.props.id} className="selection__options--pallete">
           <input
             id={this.props.id}
             type="radio"
             onChange={this.handleColor}
-            name="palette"
-            className="selection__options--input js-colorOption js-paletteDefault"
+            name="pallete"
+            className="selection__options--input js-colorOption js-palleteDefault"
             checked={this.props.pallete === this.props.value}
           />
-          <div className={`palette ${this.props.opt1}`}></div>
-          <div className={`palette ${this.props.opt2}`}></div>
-          <div className={`palette ${this.props.opt3}`}></div>
+          <div className={`pallete ${this.props.opt1}`}></div>
+          <div className={`pallete ${this.props.opt2}`}></div>
+          <div className={`pallete ${this.props.opt3}`}></div>
         </label>
       </div>
     );

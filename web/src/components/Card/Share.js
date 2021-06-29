@@ -7,7 +7,7 @@ class Share extends React.Component {
 
     this.state = {
       response: "",
-      url: "sfdwffdd",
+      url: "",
     };
 
     this.handleFetch = this.handleFetch.bind(this);
@@ -78,8 +78,6 @@ export default Share; */
     let warning = "";
     let share = "hidden-share";
     console.log(this.state.url);
-    console.log("fdfdg");
-    
 
     if (this.state.response !== true) {
       twitter = "set-up-container js-response js-hiddenTwitter";
@@ -103,22 +101,23 @@ export default Share; */
             <div className={warning}>{this.state.response}</div>
             <div className={twitter}></div>
             <div className={share}>
-              <h3 class="text-set-up">La tarjeta ha sido creada:</h3>
+              <h3 className="text-set-up">La tarjeta ha sido creada:</h3>
               <p>
                 <a
                   href={this.state.url}
-                  class="link-set-up js-twitter-link"
+                  className="link-set-up js-twitter-link"
                   target="_blank"
                 >
                   {this.state.url}
                 </a>
               </p>
+
               <a
-                class="twitter-button js-btn-twitter"
+                className="twitter-button js-btn-twitter"
                 target="_blank"
-                href="wwww"
+                href={"https://twitter.com/intent/tweet?text=" + this.state.url}
               >
-                <i class="fa fa-twitter"></i> Compartir en Twitter
+                <i className="fa fa-twitter"></i> Compartir en Twitter
               </a>
             </div>
           </div>

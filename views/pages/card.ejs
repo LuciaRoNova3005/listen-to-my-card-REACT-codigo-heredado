@@ -14,15 +14,26 @@
     />
     <link rel="icon" href="./assets/images/favicon-ltmc.png" />
     <link
+      href="/static/css/main.be9b5e76.chunk.css"
       rel="stylesheet"
-      href="../../public/static/css/main.4d330ba1.chunk.css"
+      type="text/css"
     />
-    <title>Awesome profile-cards</title>
+    <title>Listen to my Card</title>
   </head>
 
-  <body>
-    <section class="page__preview">
-      <div class="page__preview--card js-cardElement <%= palette %>">
+  <body style="width: 100%; background: #a3ca93">
+    <section
+      className="page__preview"
+      style="
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div class="page__preview--card js-cardElement opt<%=pallete%>">
         <div class="preview__card--title-wrapper js-op__wrapper">
           <h2 class="preview__card--title js-namePreview js-op__name">
             <%= name %>
@@ -32,8 +43,6 @@
         <div
           class="preview__card--image js-imgPreview"
           style="
-            width: 100%;
-            height: rem(200);
             background-image: url('<%= image %>');
             background-size: cover;
             background-position: center;
@@ -53,6 +62,7 @@
               href="tel:
               <%=phone %>"
               target="_blank"
+              rel="noopener noreferrer"
             ></a>
           </li>
           <li class="rrss-item js-op__circle js-op1__circle2">
@@ -67,6 +77,7 @@
               "
               href="mailto:<%=email %>"
               target="_blank"
+              rel="noopener noreferrer"
             ></a>
           </li>
           <li class="rrss-item js-op__circle js-op1__circle3">
@@ -81,6 +92,7 @@
               "
               href="https://www.linkedin.com/in/<%= linkedin %>"
               target="_blank"
+              rel="noopener noreferrer"
               ><div class="icon"></div
             ></a>
           </li>
@@ -96,6 +108,7 @@
               "
               href="https://github.com/<%= github %>"
               target="_blank"
+              rel="noopener noreferrer"
             ></a>
           </li>
         </ul>
@@ -103,3 +116,50 @@
     </section>
   </body>
 </html>
+
+<!--
+  <div className={`page__preview--card js-cardElement ${palleteCard()}`}>
+    <div className="preview__card--title-wrapper js-op__wrapper">
+      <h2 className="preview__card--title js-namePreview js-op__name">
+        {nameCard}
+      </h2>
+      <h3 className="preview__card--subtitle js-jobPreview">{jobCard}</h3>
+    </div>
+    <div className="preview__card--image js-imgPreview">
+      <Profile image={props.image} />
+    </div>
+
+    <ul className="preview__card--rrss">
+      <li className="rrss-item js-op__circle js-op1__circle1">
+        <a
+          className="rrss-link fas fa-mobile-alt js-telPreview js-op__icon js-op1__icon1"
+          href={"tel:+34" + props.phone}
+          target="_blank"
+        ></a>
+      </li>
+      <li className="rrss-item js-op__circle js-op1__circle2">
+        <a
+          className="rrss-link fas fa-envelope js-mailPreview js-op__icon js-op1__icon2"
+          href={"mailto:" + props.email}
+          target="_blank"
+        ></a>
+      </li>
+      <li className="rrss-item js-op__circle js-op1__circle3">
+        <a
+          className="rrss-link fab fa-linkedin-in js-linkedinPreview js-op__icon js-op1__icon3"
+          href={"https://www.linkedin.com/in/" + props.linkedin}
+          target="_blank"
+        >
+          <div className="icon"></div>
+        </a>
+      </li>
+      <li className="rrss-item js-op__circle js-op1__circle4">
+        <a
+          className="rrss-link fab fa-github-alt js-gitHubPreview js-op__icon js-op1__icon4"
+          href={"https://github.com/" + props.github}
+          target="_blank"
+        ></a>
+      </li>
+    </ul>
+  </div>
+</section> -->

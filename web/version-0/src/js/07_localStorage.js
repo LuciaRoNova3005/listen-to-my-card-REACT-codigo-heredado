@@ -12,15 +12,15 @@ function getLocalStorage() {
 
   //CONSERVAMOS LA PALETA GUARDADA
   if (savedForm !== null) {
-    const paletteElements = document.querySelectorAll(".js-colorOption");
-    for (const paletteElement of paletteElements) {
-      if (paletteElement.value === savedForm.palette) {
-        paletteElement.checked = true;
+    const palleteElements = document.querySelectorAll(".js-colorOption");
+    for (const palleteElement of palleteElements) {
+      if (palleteElement.value === savedForm.pallete) {
+        palleteElement.checked = true;
       }
       const cardElement = document.querySelector(".js-cardElement");
 
       cardElement.classList.remove("opt1", "opt2", "opt3");
-      cardElement.classList.add(`opt${savedForm.palette}`);
+      cardElement.classList.add(`opt${savedForm.pallete}`);
     }
     //VOLCAMOS DATOS A INPUTS
     inputName.value = savedForm.name;

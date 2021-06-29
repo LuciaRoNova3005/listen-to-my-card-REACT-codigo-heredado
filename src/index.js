@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const Database = require("better-sqlite3");
+const { response } = require("express");
 
 // create server
 const server = express();
@@ -24,19 +25,19 @@ const db = new Database("./src/database.db", {
 });
 
 server.get("/card/:id", (req, res) => {
-  const query = db.prepare(`SELECT * from card where id= ?`);
+  const query = db.prepare(`SELECT * from card WHERE id=?`);
   const data = query.get(req.params.id);
   console.log(data);
   if (data !== undefined) {
-    res.render("page/card", data);
+    res.render("pages/card", data);
   } else {
-    res.render("page/card-not-found");
+    res.render("pages/card-not-found");
   }
 });
 
-server.post("/card", (req, res) => {
+server.post("/card/", (req, res) => {
   if (
-    req.body.palette === "" ||
+    req.body.pallete === "" ||
     req.body.name === "" ||
     req.body.job === "" ||
     req.body.email === "" ||
@@ -53,7 +54,7 @@ server.post("/card", (req, res) => {
   } else {
     //insertar en la bd
     const query = db.prepare(
-      "INSERT INTO card (name, job, image, phone, email, linkedin, github, palette) VALUES (?,?,?,?,?,?,?,?)"
+      "INSERT INTO card (name, job, image, phone, email, linkedin, github, pallete) VALUES (?,?,?,?,?,?,?,?)"
     );
     const result = query.run(
       req.body.name,
@@ -63,14 +64,16 @@ server.post("/card", (req, res) => {
       req.body.email,
       req.body.linkedin,
       req.body.github,
-      req.body.palette
+      req.body.pallete
     );
-    const response = {
-      success: true,
-      cardURL:
-        "https://awesome-profile-cards.herokuapp.com/card/" +
-        result.lastInsertRowid,
-    };
+
+    response.success = true;
+    if (req.hostname === "localhost") {
+      response.cardURL = `http://localhost:${serverPort}/card/${result.lastInsertRowid}`;
+    } else {
+      response.cardURL = `https://awesome-profile-cards.herokuapp.com/card/${result.lastInsertRowid}`;
+    }
+
     res.json(response);
   }
 });
