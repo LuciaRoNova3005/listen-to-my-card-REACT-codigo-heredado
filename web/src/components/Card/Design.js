@@ -21,7 +21,6 @@ class Design extends React.Component {
               opt1="pallete__cold1"
               opt2="pallete__cold2"
               opt3="pallete__cold3"
-              /* isChecked={this.props.pallete === "1"} */
               handleColor={this.props.handleColor}
             />
             <Pallete
@@ -32,7 +31,6 @@ class Design extends React.Component {
               opt1="pallete__hot1"
               opt2="pallete__hot2"
               opt3="pallete__hot3"
-              /* isChecked={this.props.pallete === "2"} */
               handleColor={this.props.handleColor}
             />
             <Pallete
@@ -43,7 +41,6 @@ class Design extends React.Component {
               opt2="pallete__mix2"
               opt3="pallete__mix3"
               pallete={this.props.pallete}
-              /* isChecked={this.props.pallete === "3"} */
               handleColor={this.props.handleColor}
             />
           </div>

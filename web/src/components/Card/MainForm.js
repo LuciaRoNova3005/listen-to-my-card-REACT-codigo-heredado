@@ -13,7 +13,6 @@ function MainForm(props) {
       method="post"
       id="form"
       autoComplete="off"
-      /* handleReset={props.handleReset} */
     >
       <Collapsable title="Diseña" icon="far fa-object-ungroup header-icon">
         <Design
@@ -34,7 +33,6 @@ function MainForm(props) {
           github={props.github}
           handleInputData={props.handleInputData}
           updateAvatar={props.updateAvatar}
-          // handleReset={props.handleReset}
         ></Fill>
       </Collapsable>
 

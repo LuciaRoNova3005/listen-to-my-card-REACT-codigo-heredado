@@ -1,5 +1,3 @@
-//Esto debería llamarse Card y estar en components//
-
 import "../../stylesheets/App.scss";
 import Header from "./Header";
 import Main from "./Main";

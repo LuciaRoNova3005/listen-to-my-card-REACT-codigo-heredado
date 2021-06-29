@@ -1,5 +1,4 @@
 const getApiCard = (dataCard) => {
-  console.log("fsdfjdhf");
   return fetch("/card/", {
     method: "POST",
     body: JSON.stringify(dataCard),

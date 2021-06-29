@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import defaultAvatar from "../..//images/listen-logo.png";
-// import '../stylesheets/GetAvatar.css';
 
 class GetAvatar extends React.Component {
   constructor(props) {

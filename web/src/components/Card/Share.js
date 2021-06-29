@@ -16,7 +16,6 @@ class Share extends React.Component {
   handleFetch(ev) {
     ev.preventDefault();
     this.userCard = this.props;
-    console.log(this.userCard);
     if (this.props.name === "") {
       this.setState({ response: "Rellena el campo con tu nombre" });
     } else if (this.props.job === "") {
@@ -32,10 +31,8 @@ class Share extends React.Component {
     } else {
       getApiCard(this.userCard).then((resultCard) => {
         if (resultCard.success === false) {
-          console.log(this.userCard);
           this.setState({ response: "Faltan datos por llenar" });
         } else {
-          console.log(resultCard);
           this.setState({
             response: true,
             url: resultCard.cardURL,
@@ -45,39 +42,10 @@ class Share extends React.Component {
     }
   }
 
-  /* render() {
-    let nohidden = "";
-    if (this.state.response === "") {
-      nohidden = "set-up-container js-response js-hiddenTwitter";
-    } else {
-      nohidden = "set-up-container js-response";
-    }
-    return (
-      <fieldset className="section-share container">
-        <div className="hidden-content">
-          <div className="button-container">
-            <button
-              onClick={this.handleFetch}
-              className="share-button js-create-card share-button2"
-            >
-              <i className="far fa-address-card address-card-icon"></i>
-              crear tarjeta
-            </button>
-            <div className={nohidden}>{this.state.response}</div>
-            <div className={nohidden}></div>
-          </div>
-        </div>
-      </fieldset>
-    );
-  }
-}
-export default Share; */
-
   render() {
     let twitter = "";
     let warning = "";
     let share = "hidden-share";
-    console.log(this.state.url);
 
     if (this.state.response !== true) {
       twitter = "set-up-container js-response js-hiddenTwitter";
