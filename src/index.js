@@ -71,7 +71,7 @@ server.post("/card/", (req, res) => {
     if (req.hostname === "localhost") {
       response.cardURL = `http://localhost:${serverPort}/card/${result.lastInsertRowid}`;
     } else {
-      response.cardURL = `https://awesome-profile-cards.herokuapp.com/card/${result.lastInsertRowid}`;
+      response.cardURL = `https://equipo-2.herokuapp.com/card/${result.lastInsertRowid}`;
     }
 
     res.json(response);
